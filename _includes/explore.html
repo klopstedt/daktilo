@@ -1,4 +1,11 @@
 <div class="explore">
+    {% if page.layout == "post" %}
+    <div class="about__devider">-</div>
+    <div class="about__text">
+        Written by <strong> {% if page.author.fullname %} {{ page.author.fullname }} {% else %} {{ site.author.fullname }} {% endif %}</strong>
+        on <strong>{{ page.date | date: "%d %B %Y" }}</strong>
+    </div>
+    {% endif %}
     <div class="explore__devider">*****</div>
     <div class="explore__label">Explore the different categories</div>
     <ul class="categories">
@@ -6,6 +13,6 @@
             <li class="categories__item"><a href="{{ '/categories/' | append: category.slug | prepend: site.baseurl }}">{{ category.name }}</a></li>
         {% endfor %}
 		<li class="categories__item"><a href="{{ '/' | prepend: site.baseurl }}">All</a></li>
-    <li>a <a href="jekyllrb.com">jekyll</a> theme by <a href="https://github.com/kronik3r/daktilo">kronik3r</a></l>
+    <li>a <a href="jekyllrb.com">jekyll</a> theme by <a href="https://github.com/kronik3r/daktilo">kronik3r</a></li>
     </ul>
 </div>
