@@ -4,6 +4,7 @@ sitemap:
   exclude: 'yes'
 ---
 User-agent: *
-Disallow:
+Disallow: /imprint/
+Disallow: /privacy/
 
 Sitemap: {{ site.url }}/sitemap.xml
